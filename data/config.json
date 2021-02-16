@@ -1,0 +1,13 @@
+{
+    "entities": [
+        {
+            "name": "team",
+            "fetchxmlbody": "<filter><condition attribute='isdefault' operator='eq' value='false'/></filter>",
+            "excludefields": ["transactioncurrencyid", "exchangerate", "systemmanaged", "administratorid", "organizationid", "queueid", "isdefault", "createdonbehalfby", "createdon", "modifiedby", "modifiedonbehalfby", "modifiedon", "createdonbehalfby", "createdby", "ownerid", "owningbusinessunit", "owninguser"]
+        },
+        {
+            "name": "teamroles",
+            "fetchxmlbody": "<link-entity name='team' from='teamid' to='teamid'><filter><condition attribute='isdefault' operator='eq' value='false'/></filter></link-entity>"
+        }
+    ]
+}
