@@ -5,6 +5,7 @@
 - source control of important configuration data
 - repeatable "single artifact" versioning, release and deployment - release once, keep the generated files for version X.Y.Z and deploy 0..N times to different environments.
 - since it's just PowerShell scripts, fully extendable.
+- downloads the needed dependencies automatically, so easy to share.
 
 See Microsoft documentation on the best practices this is designed to support:
 
@@ -14,6 +15,7 @@ See Microsoft documentation on the best practices this is designed to support:
 
  - Copy the contents of this repo into a new Git workspace
  - Edit this file and remove this header. 
+ - Add any custom first time setup instructions (like selecting 'yes' to the 'enable D365 apps' option if your solution needs is)
  - Edit `settings.ps1` and set the `$solutionname` and list of dependencies (put files in `dependencies`)
  - Edit `data\config.json` to define the set of data records to be controlled.
  - Follow the instructions below to understand how to export the initial version of your solution and data.
@@ -30,19 +32,19 @@ You must work on this in a clean environment which is your own and not shared by
 
 ## How to import the solution and data so you can view and edit it ##
 - Get the latest version og all the files from source control into your repository. e.g. `Git pull`
-- Create an empty PowerApps environment with a DataVerse database select ing ****Yes/No**** to D365 option).
+- Create an empty PowerApps environment with a DataVerse database
 - Open an PowerShell prompt and execute the following command:
 
   `& pathto\import.ps1 -verbose`
 
   Where `pathto` is the path to your workspace folder for this repo. 
-- The first time you run the script, it will prompt you to connect to a CRM organisation. Connect to the organisation you've setup for development. Subsequent invocations in the same PowerShell session will remember the connection which was selected. 
+- The first time you run the script, it will prompt you to connect to a DataVerse environment. Connect to the organisation you've setup for development. Subsequent invocations in the same PowerShell session will remember the connection which was selected. 
 - The script will now:
   - Deploy the correct version of Core dependency (not if you're working on Core itself obviously)
-  - Import the unmanaged CRM solution from the `solution` subfolder. (This uses the Solution Packager tool provided by the PowerApps SDK to turn these files into a normal `.zip` solution file.)
+  - Import the unmanaged DataVerse solution from the `solution` subfolder. (This uses the Solution Packager tool provided by the PowerApps SDK to turn these files into a normal `.zip` solution file.)
   - Import the configuration data from the `data` subfolder.
 
-## Editing the CRM solution
+## Editing the DataVerse solution
 
 After importing the latest version you can edit the PowerApps solution using the normal facilities in the PowerApps Maker UI.
 
