@@ -38,7 +38,7 @@ Like most things there are pros and cons and your experience may vary depending 
 | Usefullness of the source control history | Difficult due to instability of the generated XML outputs | Improved because of 'canonicalisation' process |
 | Ability to branch and merge | Possible but difficult due to instability of the generated XML outputs | Improved because of 'canonicalisation' process |
 
-In summary the AzDO approach is more suited to simple 'maker' scenarios and DataVerseALM approach might work better for pro-development teams, but needs some investment in source control skills to use.
+In summary the AzDO approach is more suited to simple 'maker' scenarios (but needs someone with more experience to set it up and support them) and DataVerseALM approach might work better for pro-development teams (but needs some investment in source control skills to use).
 
 ---
 *** End of template header. Remove everything above the --- below when you use this template ***
