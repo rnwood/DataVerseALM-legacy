@@ -1,5 +1,7 @@
 # DataVerseALM
- This is a repo template for a lightweight (no CI server) ALM solution for a PowerApps/DataVerse (including D365 Online) solution and associated system/configuration data supporting the following:
+ This is a repo template for a lightweight (no CI server) ALM solution for a PowerApps/DataVerse (including D365 Online) solution and associated system/configuration data.
+ 
+ ## Features
 
 - source control of a PowerApps solution using "Solution Packager" tool from MS
 - source control of important configuration data
@@ -9,9 +11,10 @@
 
 See Microsoft documentation on the best practices this is designed to support:
 
-- [https://docs.microsoft.com/en-us/power-platform/admin/wp-application-lifecycle-management](https://docs.microsoft.com/en-us/power-platform/admin/wp-application-lifecycle-management)
+- [Application lifecycle management](https://docs.microsoft.com/en-us/power-platform/admin/wp-application-lifecycle-management)
+- [Use source control with solution files](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/use-source-control-solution-files)
 
- To use this template:
+ ## To use this template:
 
  - Copy the contents of this repo into a new Git workspace
  - Edit this file and remove this header. 
@@ -20,7 +23,25 @@ See Microsoft documentation on the best practices this is designed to support:
  - Edit `data\config.json` to define the set of data records to be controlled.
  - Follow the instructions below to understand how to export the initial version of your solution and data.
 
+## FAQ
 
+> **Isn't it easier/better to use an Azure Devops pipeline with Microsoft Power Platform Build Tools?**
+
+Like most things there are pros and cons and your experience may vary depending on your team and requirements:
+
+| Area | Azure DevOps pipeline w/PPBT | DataVerseALM |
+|-|-|-|
+| Maker/developer skills needed | Awareness of AzDo pipeline and support from administrator when things go wrong | Source Control, Running the scripts |
+| Administrator skills needed | AzDo Pipelines, Source Control | Editing PowerShell scripts |
+| Isolation between developers | Hard to setup/use with more than one dev environment | Devs can work in own environment by default  |
+| Visibility/control of changes before commit | None by default as changes are commited without review (although can be achieved with a PR process) | Changes available for review before committing |
+| Usefullness of the source control history | Difficult due to instability of the generated XML outputs | Improved because of 'canonicalisation' process |
+| Ability to branch and merge | Possible but difficult due to instability of the generated XML outputs | Improved because of 'canonicalisation' process |
+
+In summary the AzDO approach is more suited to simple 'maker' scenarios and DataVerseALM approach might work better for pro-development teams, but needs some investment in source control skills to use.
+
+---
+*** End of template header. Remove everything above the --- below when you use this template ***
 ---
 
 # How To Develop, Release and Deploy the Solution in This Repository #
