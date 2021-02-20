@@ -33,7 +33,7 @@ Like most things there are pros and cons and your experience may vary depending 
 |-|-|-|
 | Maker/developer skills needed | Awareness of AzDo pipeline and support from administrator when things go wrong | Source Control, Running the scripts |
 | Administrator skills needed | AzDo Pipelines, Source Control | Editing PowerShell scripts |
-| Isolation between developers | Hard to setup/use with more than one dev environment | Devs can work in own environment by default  |
+| Isolation between developers | Hard to setup/use with more than one dev environment ([see here for an approach](https://www.itaintboring.com/dynamics-crm/cicd-for-powerplatform-round-3/)) | Devs can work in own environment by default  |
 | Visibility/control of changes before commit | None by default as changes are commited without review (although can be achieved with a PR process) | Changes available for review before committing |
 | Usefullness of the source control history | Difficult due to instability of the generated XML outputs | Improved because of 'canonicalisation' process |
 | Ability to branch and merge | Possible but difficult due to instability of the generated XML outputs | Improved because of 'canonicalisation' process |
