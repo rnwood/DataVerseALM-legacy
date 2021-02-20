@@ -108,7 +108,7 @@ Following this process does not apply the changes to any environment. That proce
 
   Where `pathto` is the path to your workspace folder for this repo. 
 
-- Release will be generated at `..\.release` (not committed).
+- Release will be generated at `..\.release` (not committed). Copy these to an shared archive and keep safe. You should use the same exact files to deploy to each environment to help make sure that what you test in your test env is exactly what gets deployed in production.
 
 ## Deploying a release ##
 
