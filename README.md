@@ -5,6 +5,7 @@
 
 - source control of a PowerApps solution using "Solution Packager" tool from MS
 - source control of important configuration data
+- better support for isolation of developers and branching and merging than other solutions
 - repeatable "single artifact" versioning, release and deployment - release once, keep the generated files for version X.Y.Z and deploy 0..N times to different environments.
 - since it's just PowerShell scripts, fully extendable.
 - downloads the needed dependencies automatically, so easy to share.
