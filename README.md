@@ -26,7 +26,7 @@ See Microsoft documentation on the best practices this is designed to support:
 
 ## FAQ
 
-> **Isn't it easier/better to use an Azure Devops pipeline with Microsoft Power Platform Build Tools?**
+### Isn't it easier/better to use an Azure Devops pipeline with Microsoft Power Platform Build Tools?
 
 Like most things there are pros and cons and your experience may vary depending on your team and requirements:
 
@@ -41,7 +41,7 @@ Like most things there are pros and cons and your experience may vary depending 
 
 In summary the AzDO approach is more suited to simple 'maker' scenarios (but needs someone with more experience to set it up and support them) and DataVerseALM approach might work better for pro-development teams (but needs some investment in source control skills to use).
 
-> **Why isn't this a PowerShell module so I can use it across multiple projects?**
+### Why isn't this a PowerShell module so I can use it across multiple projects?
 
 Tying the version of the scripts to the project you're using them for is a good thing IMO; it means using an updated version for one project will never break stuff for other projects and that everybody in your team is using the correct version automatically.
 
