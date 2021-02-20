@@ -53,7 +53,7 @@ To work on this, you need to import them into a PowerApps DataVerse environment.
 You must work on this in a clean environment which is your own and not shared by other people.
 
 ## How to import the solution and data so you can view and edit it ##
-- Get the latest version og all the files from source control into your repository. e.g. `Git pull`
+- Get the latest version of all the files from source control into your repository. e.g. `git pull`
 - Create an empty PowerApps environment with a DataVerse database
 - Open an PowerShell prompt and execute the following command:
 
