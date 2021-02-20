@@ -41,6 +41,12 @@ Like most things there are pros and cons and your experience may vary depending 
 
 In summary the AzDO approach is more suited to simple 'maker' scenarios (but needs someone with more experience to set it up and support them) and DataVerseALM approach might work better for pro-development teams (but needs some investment in source control skills to use).
 
+> **Why isn't this a PowerShell module so I can use it across multiple projects?**
+
+Tying the version of the scripts to the project you're using them for is a good thing IMO; it means using an updated version for one project will never break stuff for other projects and that everybody in your team is using the correct version automatically.
+
+Having the scripts live in your project's repo and fetch everything needed when executed is also a benefit for onboarding of new people as there's less manual instructions ("install module X version 1.2.3") for people to miss.
+
 ---
 *** End of template header. Remove everything above the --- below when you use this template ***
 ---
