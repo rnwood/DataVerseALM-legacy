@@ -66,9 +66,9 @@ You must work on this in a clean environment which is your own and not shared by
   `& pathto\import.ps1 -verbose`
 
   Where `pathto` is the path to your workspace folder for this repo. 
-- The first time you run the script, it will prompt you to connect to a DataVerse environment. Connect to the organisation you've setup for development. Subsequent invocations in the same PowerShell session will remember the connection which was selected. 
+- The first time you run the script, it will prompt you to connect to a DataVerse environment. Connect to the organisation you've setup for development. Subsequent invocations will remember the connection which was selected. 
 - The script will now:
-  - Deploy the correct version of Core dependency (not if you're working on Core itself obviously)
+  - Deploy any dependencies
   - Import the unmanaged DataVerse solution from the `solution` subfolder. (This uses the Solution Packager tool provided by the PowerApps SDK to turn these files into a normal `.zip` solution file.)
   - Import the configuration data from the `data` subfolder.
 
